@@ -44,7 +44,7 @@ The game utilizes strict OOP modeling to decouple story tracks and programming l
 ```mermaid
 classDiagram
     class Form1 {
-        <<WinForms GUI>>
+        <<WinForms_GUI>>
         -Stories activeStory
         -Languages activeLanguage
         -DataBaseDAD database
@@ -54,7 +54,7 @@ classDiagram
     class Stories {
         <<abstract>>
         #String genreName
-        +getChapterText(int)* String
+        +getChapterText(int) String
     }
     class CrimeStory {
         +getChapterText(int) String
@@ -68,8 +68,8 @@ classDiagram
     class Languages {
         <<abstract>>
         #String languageName
-        +getQuestion(int)* String
-        +verifyAnswer(int, String)* bool
+        +getQuestion(int) String
+        +verifyAnswer(int, String) bool
     }
     class CsharpLanguage {
         +getQuestion(int) String
